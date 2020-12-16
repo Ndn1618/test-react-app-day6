@@ -1,3 +1,15 @@
+.input:focus {
+  outline: none;
+}
+
+.border--green {
+  border: 1px solid green;
+}
+
+.border--red {
+  border: 1px solid red;
+}
+
 .App {
   text-align: center;
 }

@@ -6,7 +6,19 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <body>
+      <section class="section">
+        <div class="container">
+          <div class="heading">
+            <h1 class="title">Section</h1>
+            <h2 class="subtitle">
+              A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
+            </h2>
+          </div>
+          <App />
+        </div>
+      </section>
+    </body>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+import { useRef } from 'react'
 import './App.css';
 
 function App() {
+  const elInputRef = useRef(null)
+
+  const inputOnChange = (evt) => {
+    let inputValueLength = String(evt.target.value.trim()).length
+    if (inputValueLength >= 8) {
+      elInputRef.current.classList.add('border--green')
+      elInputRef.current.classList.remove('border--red')
+    } else {
+      elInputRef.current.classList.add('border--red')
+      elInputRef.current.classList.remove('border--green')
+    }
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <input className='input' ref={elInputRef} onChange={inputOnChange} type='text' placeholder='Write min 8 characters' />
+    </>
   );
 }
 
