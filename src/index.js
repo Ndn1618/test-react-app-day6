@@ -1,24 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Language from './Components/Language';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <body>
       <section class="section">
         <div class="container">
-          <div class="heading">
-            <h1 class="title">Section</h1>
-            <h2 class="subtitle">
-              A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
-            </h2>
-          </div>
-          <App />
+          <Language />
         </div>
       </section>
-    </body>
   </React.StrictMode>,
   document.getElementById('root')
 );
