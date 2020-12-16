@@ -6,20 +6,28 @@ function Language () {
   const [heading, setHeading] = useState('Welcome')
   const [develepedBy, setDevelopedBy] = useState('Develeped by CompanyX')
 
+  const changeLanguage = (language) => {
+    console.log(language)
+    if (language === 'uz') {
+      setHeading('Hush kelibsiz')
+      setDevelopedBy('CompanyX tomonidan ishlab chiqilgan')
+    } else if (language === 'ru') {
+      setHeading('Добро пожаловать')
+      setDevelopedBy('Разработано CompanyX')
+    } else {
+      setHeading('Welcome')
+      setDevelopedBy('Developed by CompanyX')
+    }
+  }
+
   return (
     <>
-      <h1 class="title">{heading}</h1>
+      <h1 className="title">{heading}</h1>
 
       <select onChange={
-        e => {
+        (e) => {
           setLang(e.target.value)
-          if (e.target.value === 'uz') {
-            setHeading('Hush kelibsiz')
-            setDevelopedBy('CompanyX tomonidan ishlab chiqilgan')
-          } else if (e.target.value === 'ru') {
-            setHeading('Добро пожаловать')
-            setDevelopedBy('Разработано CompanyX')
-          }
+          changeLanguage(e.target.value)
         }}
         defaultValue={lang}
       >

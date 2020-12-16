@@ -6,8 +6,8 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-      <section class="section">
-        <div class="container">
+      <section className="section">
+        <div className="container">
           <Language />
         </div>
       </section>
